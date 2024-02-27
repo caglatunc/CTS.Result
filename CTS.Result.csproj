@@ -7,15 +7,22 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Result Pattern</Title>
     <Version>8.0.0</Version>
-    <Authors />
+    <Authors>Cagla Tunc Savas</Authors>
     <Description>This is a result class for .NET</Description>
-    <Copyright>2024 Cagla Tunc Savas. All rights reserved.</Copyright>
+    <Copyright>© 2024 Cagla Tunc Savas. All rights reserved.</Copyright>
     <PackageIcon>icon.jpg</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/caglatunc/CTS.Result.git</RepositoryUrl>
+    <PackageTags>result</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
     <None Update="icon.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="LICENSE">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
