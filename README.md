@@ -63,7 +63,7 @@ Result<string> result = (HttpStatusCode.BadRequest, new List<string> { "Error 1"
 ```csharp
 Result<string> result = (HttpStatusCode.BadRequest, "Single error message");
 ```
-### Checking the Result
+### Checking the Result:
 
 You can check if an operation was successful by inspecting the `IsSuccess` property:
 
