@@ -6,9 +6,9 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Result Pattern</Title>
-    <Version>8.0.0</Version>
+    <Version>8.0.1</Version>
     <Authors>Cagla Tunc Savas</Authors>
-    <Description>This is a result class for .NET</Description>
+    <Description>CTS.Result is a result class library designed for .NET applications that provide strong and flexible result management, developed for error handling and response modeling.</Description>
     <Copyright>© 2024 Cagla Tunc Savas. All rights reserved.</Copyright>
     <PackageIcon>icon.jpg</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
