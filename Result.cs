@@ -5,7 +5,7 @@ public sealed class Result<T>
 {
     public T? Data { get; set; }
     public List<string>? ErrorMessages { get; set; }
-    public bool IsSuccess { get; set; } = true;
+    public bool IsSuccessful { get; set; } = true;
     public int StatusCode { get; set; } = (int)HttpStatusCode.OK;
 
     public Result(T data)
@@ -15,14 +15,14 @@ public sealed class Result<T>
 
     public Result(int statusCode, List<string> errorMessages)
     {
-        IsSuccess = false;
+        IsSuccessful = false;
         StatusCode = statusCode;
         ErrorMessages = errorMessages;
     }
 
     public Result(int statusCode, string errorMessage)
     {
-        IsSuccess = false;
+        IsSuccessful = false;
         StatusCode = statusCode;
         ErrorMessages = new() { errorMessage };
     }
@@ -39,4 +39,15 @@ public sealed class Result<T>
     {
         return new(parameters.statusCode, parameters.errorMessage);
     }
+
+    public static Result<T> Succeed(T data)
+    {
+        return new(data);
+    }
+
+    public static Result<T> Failure(int statusCode, List<string> errorMessages)
+    {
+        return new(statusCode, errorMessages);
+    }
+    
 }
