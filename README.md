@@ -63,6 +63,25 @@ Result<string> result = (400, new List<string> { "Error 1", "Error 2" });
 ```csharp
 Result<string> result = (400, "Single error message");
 ```
+
+### Creating a Succeed and Failure Method:
+
+**For success using succeed method**:
+```csharp
+Result<string> result = Result<string>.Succeed("Is successful");
+```
+
+**For error using failure method**:
+**One error message**
+```csharp
+Result<string> result = Result<string>.Failure(500,"Is fail!");
+```
+
+**Multiple error messages**
+```csharp
+Result<string> result = Result<string>.Failure(500, new List<string>() {"Is fail!", "Is not unique!"});
+```
+
 ### Checking the Result:
 
 You can check if an operation was successful by inspecting the `IsSuccess` property:
