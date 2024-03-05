@@ -82,6 +82,16 @@ Result<string> result = Result<string>.Failure(500,"Is fail!");
 Result<string> result = Result<string>.Failure(500, new List<string>() {"Is fail!", "Is not unique!"});
 ```
 
+**One error message return 500 status code**
+```csharp
+Result<string> result = Result<string>.Failure("Is fail!"); // return 500 status code
+```
+
+**Multiple error messages return 500 status code**
+```csharp
+Result<string> result = Result<string>.Failure(new List<string>(), {"Is fail!", "Is not unique!"});// return 500 status code
+```
+
 ### Checking the Result:
 
 You can check if an operation was successful by inspecting the `IsSuccess` property:
